@@ -1,8 +1,10 @@
-Author : DongT2LS22
-
 # Membread
+
+Author : DongT2LS22
 Eat membread !
 
+
+--------------------------------------------------------------------------------------------------------------------
 Hi there! I'm membread who gives people great courses
 
 Membread using atomic design 

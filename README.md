@@ -1,10 +1,7 @@
-# gr1_flutter
+# Membread
+Eat membread !
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
+Hi there! I'm membread who gives people great courses
 
 A few resources to get you started if this is your first Flutter project:
 

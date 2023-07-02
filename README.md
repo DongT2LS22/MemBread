@@ -1,11 +1,10 @@
 # Membread
 
 Author : DongT2LS22
-Eat membread !
-
+Start : 6/2023
 
 --------------------------------------------------------------------------------------------------------------------
-Hi there! I'm membread who gives people great courses
+Hi there! I'm membread who gives people great courses . Let's eat
 
 Membread using atomic design 
 

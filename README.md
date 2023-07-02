@@ -1,7 +1,11 @@
+Author : DongT2LS22
+
 # Membread
 Eat membread !
 
 Hi there! I'm membread who gives people great courses
+
+Membread using atomic design 
 
 A few resources to get you started if this is your first Flutter project:
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData darkTheme = ThemeData(
+    dividerColor: Colors.grey[700],
     primaryColor: Color.lerp(const Color.fromARGB(255, 59, 117, 245),
         const Color.fromARGB(255, 76, 142, 246), 1)!,
     brightness: Brightness.dark,
@@ -33,7 +34,7 @@ ThemeData darkTheme = ThemeData(
         titleSmall: GoogleFonts.lato(
             textStyle: const TextStyle(
                 fontSize: 17,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 color: Colors.white)),
         displayMedium: GoogleFonts.lato(
             textStyle: const TextStyle(

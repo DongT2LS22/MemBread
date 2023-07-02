@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/login_page/login_page.dart';
 import 'package:gr1_flutter/screens/welcome_page/welcome_page.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: lightTheme,
       darkTheme: darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: const WelcomePage(),
     );

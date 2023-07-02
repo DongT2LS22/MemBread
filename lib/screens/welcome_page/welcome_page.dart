@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gr1_flutter/widget/atoms/logo/logo.dart';
 import 'package:gr1_flutter/widget/molecules/welcome_button/welcome_button.dart';
 
-import '../../widget/atoms/buttons/primary_button.dart';
-
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
 

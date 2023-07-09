@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/screens/login_page/login_page.dart';
-import 'package:gr1_flutter/screens/welcome_page/welcome_page.dart';
+import 'package:gr1_flutter/datas/course.dart';
+import 'package:gr1_flutter/screens/home_page/home_page.dart';
+import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const WelcomePage(),
+      home: HomePage(course: test,),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:gr1_flutter/screens/forgot_pass_page/forgot_pass_page.dart';
 import '../../atoms/checkbox/checkbox.dart';
 import '../../atoms/text_fields/email_textfield.dart';
 import '../../atoms/text_fields/pass_textfield.dart';
@@ -52,7 +52,9 @@ class _LoginTextFieldState extends State<LoginTextField> {
         ),
         Center(
           child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassPage()));
+              },
               child: Text(
                 "Forgot password ?",
                 style: TextStyle(

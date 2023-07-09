@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:gr1_flutter/screens/login_page/login_page.dart';
 import 'package:gr1_flutter/widget/atoms/buttons/light_button.dart';
 
+import '../../../screens/sign_up_page/signup_page.dart';
 import '../../atoms/buttons/primary_button.dart';
 
 class WelcomeButton extends StatelessWidget {
@@ -13,6 +13,8 @@ class WelcomeButton extends StatelessWidget {
     return Column(
       children: [
         PrimaryButton(
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const SignUpPage())),
             width: MediaQuery.of(context).size.width - 40,
             child: Center(
                 child: Text(

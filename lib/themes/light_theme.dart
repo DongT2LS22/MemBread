@@ -30,11 +30,11 @@ ThemeData lightTheme = ThemeData(
         titleMedium: GoogleFonts.lato(
             textStyle: const TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 color: Colors.black)),
         titleSmall: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 17,
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: Colors.black)),
         displayMedium: GoogleFonts.lato(

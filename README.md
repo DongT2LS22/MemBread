@@ -1,10 +1,11 @@
-# gr1_flutter
+# Membread
 
-A new Flutter project.
+Author : DongT2LS22
+Start : 6/2023
 
-## Getting Started
+Hi there! I'm membread who gives people great courses . Let's eat
 
-This project is a starting point for a Flutter application.
+Membread using atomic design 
 
 A few resources to get you started if this is your first Flutter project:
 

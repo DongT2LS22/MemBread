@@ -1,6 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 import 'package:gr1_flutter/widget/atoms/slider/flash_card_progress_slider.dart';
 import '../../models/course/lesson.dart';
 import '../molecules/buttons/primary_text_button.dart';
@@ -9,7 +10,6 @@ import '../molecules/flash_card/front_card.dart';
 
 class FlashCardPageBody extends StatefulWidget {
   Lesson lesson;
-
   FlashCardPageBody({Key? key,required this.lesson}) : super(key: key);
 
   @override
@@ -18,13 +18,11 @@ class FlashCardPageBody extends StatefulWidget {
 
 class _FlashCardPageBodyState extends State<FlashCardPageBody> {
   late double progress;
-  late int i;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     progress = 0;
-    i = 0;
   }
   final SwiperController _controller = SwiperController();
 
@@ -34,16 +32,13 @@ class _FlashCardPageBodyState extends State<FlashCardPageBody> {
       children: [
         FlashCardProgressSlider(progress: progress),
         const SizedBox(height: 20,),
-        Center(
-          child: Text("${i}/${widget.lesson.units!.length}",style: Theme.of(context).textTheme.titleMedium,),
-        ),
         SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Swiper(
             onIndexChanged: (index){
               setState(() {
                 progress = index/widget.lesson.units!.length;
-                i = index;
+                FlashCardInherited.of(context)!.changeIndex(index);
               });
             },
             controller: _controller,

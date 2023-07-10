@@ -20,7 +20,7 @@ ThemeData lightTheme = ThemeData(
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
                 fontSize: 20)),
-        iconTheme: const IconThemeData(size: 20, color: Colors.black)),
+        iconTheme: const IconThemeData(size: 25, color: Colors.black)),
     textTheme: TextTheme(
         titleLarge: GoogleFonts.lato(
             textStyle: const TextStyle(

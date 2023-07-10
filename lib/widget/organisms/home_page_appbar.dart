@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/list_course_page/list_course_page.dart';
 
 class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
   String title;
@@ -9,9 +10,31 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: GestureDetector(
         onTap: () {
-          print("Hello world");
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder:
+                  (context, animation, secondaryAnimation) =>
+                  ListCoursePage(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                const begin = Offset(0.0, 1.0);
+                const end = Offset.zero;
+                const curve = Curves.ease;
+
+                var tween = Tween(begin: begin, end: end)
+                    .chain(CurveTween(curve: curve));
+
+                return SlideTransition(
+                  position: animation.drive(tween),
+                  child: child,
+                );
+              },
+            ),
+          );
         },
-        child: SizedBox(
+        child: Container(
+            padding: const EdgeInsets.only(left: 5),
             width: MediaQuery.of(context).size.width * 1 / 2,
             child: Row(
               children: [
@@ -29,7 +52,7 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
             onPressed: () {},
-            icon: Icon(Icons.settings,size: 20,color: Theme.of(context).iconTheme.color,)
+            icon: Icon(Icons.settings,size: Theme.of(context).iconTheme.size,color: Theme.of(context).iconTheme.color,)
         )
       ],
     );

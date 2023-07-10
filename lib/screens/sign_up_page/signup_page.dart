@@ -25,7 +25,7 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SignInTextField(),
+            const SignInTextField(),
             PrimaryButton(
               width: MediaQuery.of(context).size.width - 40,
               child: Center(

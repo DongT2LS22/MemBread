@@ -23,7 +23,7 @@ ThemeData darkTheme = ThemeData(
     textTheme: TextTheme(
         titleLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 25,
+                fontSize: 27,
                 fontWeight: FontWeight.w700,
                 color: Colors.white)),
         titleMedium: GoogleFonts.lato(
@@ -43,7 +43,7 @@ ThemeData darkTheme = ThemeData(
                 color: Colors.white)),
         displayLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: Colors.white)),
         displaySmall: GoogleFonts.lato(

@@ -22,6 +22,11 @@ class _FlashCardPageState extends State<FlashCardPage> {
     _lesson = widget.lesson;
     _index = widget.index;
   }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
   void changeIndex(int index){
     setState(() {
       _index = index;

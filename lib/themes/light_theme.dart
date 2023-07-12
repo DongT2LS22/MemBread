@@ -10,7 +10,7 @@ ThemeData lightTheme = ThemeData(
       background: Colors.white,
       primary: Color.lerp(const Color.fromARGB(255, 59, 117, 245),
           const Color.fromARGB(255, 76, 142, 246), 1)!,
-      secondary: Colors.grey[300]!,
+      secondary: Colors.grey[200]!,
     ),
     appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
@@ -24,7 +24,7 @@ ThemeData lightTheme = ThemeData(
     textTheme: TextTheme(
         titleLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 25,
+                fontSize: 27,
                 fontWeight: FontWeight.w700,
                 color: Colors.black)),
         titleMedium: GoogleFonts.lato(
@@ -44,7 +44,7 @@ ThemeData lightTheme = ThemeData(
                 color: Colors.black)),
         displayLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: Colors.black)),
         displaySmall: GoogleFonts.lato(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../datas/course.dart';
 import '../molecules/card/course_card.dart';
 class ListCourseBody extends StatelessWidget {
 
@@ -15,7 +14,7 @@ class ListCourseBody extends StatelessWidget {
           children: [
             Text("Current course",style: Theme.of(context).textTheme.titleMedium,),
             const SizedBox(height: 10,),
-            CourseCard(course: test),
+            // CourseCard(id : 1, course: null,),
             const SizedBox(height: 20,),
             Text("My course",style: Theme.of(context).textTheme.titleMedium,),
           ],

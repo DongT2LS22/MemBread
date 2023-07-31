@@ -24,7 +24,7 @@ ThemeData lightTheme = ThemeData(
     textTheme: TextTheme(
         titleLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 27,
+                fontSize: 30,
                 fontWeight: FontWeight.w700,
                 color: Colors.black)),
         titleMedium: GoogleFonts.lato(

@@ -1,23 +1,39 @@
+
 import 'package:flutter/material.dart';
 
-class PrimaryCard extends StatelessWidget {
+class PrimaryCard extends StatefulWidget {
   void Function()? onTap;
   Widget child;
   double? width;
-  PrimaryCard({Key? key,this.onTap,required this.child,this.width}) : super(key: key);
+  Color? afterOnTapBackGroundColor;
+  PrimaryCard({Key? key,this.onTap,required this.child,this.width,this.afterOnTapBackGroundColor = Colors.black}) : super(key: key);
 
+  @override
+  State<PrimaryCard> createState() => _PrimaryCardState();
+}
+
+class _PrimaryCardState extends State<PrimaryCard> {
+  late bool beforeOnTap;
+  late Color changeColor;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    beforeOnTap = false;
+    changeColor = widget.afterOnTapBackGroundColor??Theme.of(context).primaryColor;
+  }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap:widget.onTap,
       child: Container(
-        width: width,
+        width: widget.width,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
+            color: beforeOnTap==false?Theme.of(context).primaryColor:changeColor,
             borderRadius: BorderRadius.circular(10)
         ),
-        child: child
+        child: widget.child
       ),
     );
   }

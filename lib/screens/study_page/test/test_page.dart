@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/screens/study_page/test/test_component.dart';
+import 'package:gr1_flutter/screens/study_page/test/completed_test_page.dart';
 import 'package:gr1_flutter/widget/organisms/none_title_appbar.dart';
 import '../../../models/course/lesson.dart';
 import '../../../widget/atoms/card/answer_card.dart';
@@ -13,6 +13,7 @@ class TestPage extends StatefulWidget {
 }
 
 class _TestPageState extends State<TestPage> {
+  List<Map<String,bool>> answers = [];
   late int _index;
   List? _list;
   List? test;
@@ -22,11 +23,6 @@ class _TestPageState extends State<TestPage> {
     super.initState();
     _index = 0;
     _list = widget.lesson.units;
-    test = [
-      TestComponent(question: widget.lesson.units![0].vocabulary, answer: _getRandomAnswer(),),
-      TestComponent(question: widget.lesson.units![1].vocabulary, answer: _getRandomAnswer(),),
-      TestComponent(question: widget.lesson.units![2].vocabulary, answer: _getRandomAnswer(),)
-    ];
   }
 
   _getRandomAnswer(){
@@ -46,22 +42,18 @@ class _TestPageState extends State<TestPage> {
     return randomAnswers;
   }
 
-  void nextQuestion(){
+  void nextQuestion(String answer,bool isDone){
     setState(() {
       _index = _index + 1;
+      answers.add({answer : isDone});
     });
   }
 
-
-
-  @override
-  Widget build(BuildContext context) {
-    List<Map<String,bool>> answer = _getRandomAnswer();
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      appBar: NonTitleAppBar(onPressed:()=> Navigator.pop(context),),
-      body:  Container(
-        padding: const EdgeInsets.only(top: 100,right: 20,left: 20,bottom: 20),
+  _getQuestion(){
+    if(_index < _list!.length){
+      List<Map<String,bool>> answer = _getRandomAnswer();
+      return Container(
+        padding: EdgeInsets.only(top: 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,17 +61,32 @@ class _TestPageState extends State<TestPage> {
             Text(_list![_index].vocabulary,style: Theme.of(context).textTheme.displayLarge,),
             Column(
               children: [
-                AnswerCard(answer: answer[0].keys.first,onTap: ()=>nextQuestion(),),
+                AnswerCard(answer: answer[0].keys.first,onTap: ()=>nextQuestion(answer[0].keys.first,answer[0].values.first)),
                 const SizedBox(height: 15,),
-                AnswerCard(answer: answer[1].keys.first,onTap: ()=>nextQuestion(),),
+                AnswerCard(answer: answer[1].keys.first,onTap: ()=>nextQuestion(answer[1].keys.first,answer[1].values.first),),
                 const SizedBox(height: 15,),
-                AnswerCard(answer: answer[2].keys.first,onTap: ()=>nextQuestion(),),
+                AnswerCard(answer: answer[2].keys.first,onTap: ()=>nextQuestion(answer[2].keys.first,answer[2].values.first)),
                 const SizedBox(height: 15,),
-                AnswerCard(answer: answer[3].keys.first,onTap: ()=>nextQuestion(),)
+                AnswerCard(answer: answer[3].keys.first,onTap: ()=>nextQuestion(answer[3].keys.first,answer[3].values.first),)
               ],
             ),
           ],
         ),
+      );
+    }else{
+      return CompletedTestPage(answers: answers,);
+    }
+    
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
+      appBar: NonTitleAppBar(onPressed:()=> Navigator.pop(context),),
+      body:  Container(
+        padding: const EdgeInsets.only(top: 0,right: 20,left: 20,bottom: 40),
+        child: _getQuestion(),
       ),
     );
   }

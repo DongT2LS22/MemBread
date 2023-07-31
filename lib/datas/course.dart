@@ -11,4 +11,4 @@ Lesson<Vocabulary> vocalesson = Lesson<Vocabulary>(units: [
   Vocabulary(vocabulary: "Welcome" , mean: "Chao mung")
 ]);
 
-Course test = Course(title: "Test",description: "Test course" , lessons: [vocalesson]);
+Future<Course> test = Course.getById(2);

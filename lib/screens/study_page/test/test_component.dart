@@ -4,6 +4,7 @@ import '../../../widget/atoms/card/answer_card.dart';
 class TestComponent extends StatefulWidget {
   String question;
   List<Map<String,bool>> answer;
+
   TestComponent({Key? key,required this.question,required this.answer}) : super(key: key);
 
   @override

@@ -3,7 +3,8 @@ import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 
 class FlashCardAppbar extends StatefulWidget implements PreferredSizeWidget {
   Function()? onPressed;
-  FlashCardAppbar({Key? key, this.onPressed}) : super(key: key);
+  int length;
+  FlashCardAppbar({Key? key, this.onPressed , required this.length}) : super(key: key);
 
   @override
   State<FlashCardAppbar> createState() => _FlashCardAppbarState();
@@ -36,7 +37,7 @@ class _FlashCardAppbarState extends State<FlashCardAppbar> {
               data: Theme.of(context).appBarTheme.iconTheme!,
               child: const Icon(Icons.arrow_back_ios)),
           onPressed: widget.onPressed),
-      title: Text("$_index/4" ,style: Theme.of(context).appBarTheme.titleTextStyle,),
+      title: Text("$_index/${widget.length}" ,style: Theme.of(context).appBarTheme.titleTextStyle,),
       centerTitle: true,
     );
   }

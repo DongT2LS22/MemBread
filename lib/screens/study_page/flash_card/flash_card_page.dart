@@ -39,7 +39,7 @@ class _FlashCardPageState extends State<FlashCardPage> {
         index: _index,
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.background,
-          appBar: FlashCardAppbar(onPressed:()=>Navigator.pop(context),),
+          appBar: FlashCardAppbar(onPressed:()=>Navigator.pop(context),length : _lesson.units!.length),
           body: FlashCardPageBody(lesson: _lesson,),
         )
     );

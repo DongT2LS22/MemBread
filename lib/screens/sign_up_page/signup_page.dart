@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/widget/atoms/buttons/primary_button.dart';
 import 'package:gr1_flutter/widget/molecules/sign_up_textfield/signup_textfield.dart';
-import 'package:gr1_flutter/widget/organisms/none_title_appbar.dart';
+import 'package:gr1_flutter/widget/organisms/app_bar/none_title_appbar.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -21,22 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SignInTextField(),
-            PrimaryButton(
-              width: MediaQuery.of(context).size.width - 40,
-              child: Center(
-                child: Text(
-                  "Sign up",
-                  style: Theme.of(context).textTheme.labelMedium,
-                ),
-              ),
-            )
-          ],
-        ),
+        child: SignInTextField(),
       ),
     );
   }

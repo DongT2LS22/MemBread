@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/datas/course.dart';
-import 'package:gr1_flutter/models/course/course.dart';
-import 'package:gr1_flutter/models/user.dart';
+import 'package:gr1_flutter/screens/help_center_page/help_center_page.dart';
 import 'package:gr1_flutter/screens/home_page/home_page.dart';
-import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';
 
 void main() async {
+  // User.register(User(name: "Dong pham",email: "dongt2ls1720@gmail.com"),"12345678");
   runApp(const MyApp());
   // print(Course.getById(2));
   // Course.create(Course(title: "Hello world",author: User(id: "1"),description: "Hello ae"));

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/widget/organisms/flash_card_appbar.dart';
-import 'package:gr1_flutter/widget/organisms/flash_card_page_body.dart';
+import 'package:gr1_flutter/widget/organisms/app_bar/flash_card_appbar.dart';
+import 'package:gr1_flutter/widget/organisms/body/flash_card_page_body.dart';
 import '../../../models/course/lesson.dart';
 
 class FlashCardPage extends StatefulWidget {

@@ -14,10 +14,13 @@ class FrontCard extends StatelessWidget {
             color: Theme.of(context).primaryColor,
             borderRadius: BorderRadius.circular(20)),
         child: Center(
-            child: Text(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
           vocabulary,
           style: Theme.of(context).textTheme.titleLarge,overflow: TextOverflow.visible,
-        )),
+        ),
+            )),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/screens/list_course_page/list_course_page.dart';
+import 'package:gr1_flutter/screens/setting_page/setting_page.dart';
 
 class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
   String title;
@@ -8,14 +9,15 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leadingWidth: 0,
+      leading: Container(),
       title: GestureDetector(
         onTap: () {
           Navigator.push(
             context,
             PageRouteBuilder(
               pageBuilder:
-                  (context, animation, secondaryAnimation) =>
-                  ListCoursePage(),
+                  (context, animation, secondaryAnimation) => ListCoursePage(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 const begin = Offset(0.0, 1.0);
@@ -51,8 +53,10 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.settings,size: Theme.of(context).iconTheme.size,color: Theme.of(context).iconTheme.color,)
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const SettingPage()));
+            },
+            icon: Icon(Icons.search,size: Theme.of(context).iconTheme.size,color: Theme.of(context).iconTheme.color,)
         )
       ],
     );

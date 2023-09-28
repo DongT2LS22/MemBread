@@ -6,7 +6,8 @@ class PrimaryCard extends StatefulWidget {
   Widget child;
   double? width;
   Color? afterOnTapBackGroundColor;
-  PrimaryCard({Key? key,this.onTap,required this.child,this.width,this.afterOnTapBackGroundColor = Colors.black}) : super(key: key);
+  double? height;
+  PrimaryCard({Key? key,this.onTap,required this.child,this.height,this.width,this.afterOnTapBackGroundColor = Colors.black}) : super(key: key);
 
   @override
   State<PrimaryCard> createState() => _PrimaryCardState();
@@ -27,6 +28,7 @@ class _PrimaryCardState extends State<PrimaryCard> {
     return GestureDetector(
       onTap:widget.onTap,
       child: Container(
+        height: widget.height,
         width: widget.width,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(

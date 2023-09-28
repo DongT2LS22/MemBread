@@ -14,7 +14,9 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: Container(),
+      ),
       body: Container(
         width: MediaQuery.of(context).size.height,
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),

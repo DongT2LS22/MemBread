@@ -5,7 +5,8 @@ import '../../atoms/buttons/border_button.dart';
 
 class CurrentLessonCard extends StatelessWidget {
   String title;
-  CurrentLessonCard({Key? key, required this.title}) : super(key: key);
+  void Function() onPressed;
+  CurrentLessonCard({Key? key, required this.title,required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class CurrentLessonCard extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: BorderButton(
+              onPressed: onPressed,
               child: Text(
                 "Change lesson",
                 style: Theme.of(context).textTheme.titleSmall,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CloseTitleAppbar extends StatelessWidget implements PreferredSizeWidget {
+class TitleAppbar extends StatelessWidget implements PreferredSizeWidget {
   Function()? onPressed;
-
-  CloseTitleAppbar({Key? key, this.onPressed}) : super(key: key);
+  Widget? title;
+  TitleAppbar({Key? key, this.onPressed,this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,9 @@ class CloseTitleAppbar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(
           icon: IconTheme(
               data: Theme.of(context).appBarTheme.iconTheme!,
-              child: const Icon(Icons.close)),
+              child: const Icon(Icons.arrow_back_ios,size: 20,)),
           onPressed: onPressed),
+      title: title??Container(),
     );
   }
 

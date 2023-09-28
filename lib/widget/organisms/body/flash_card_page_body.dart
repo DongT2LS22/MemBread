@@ -3,10 +3,10 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 import 'package:gr1_flutter/widget/atoms/slider/flash_card_progress_slider.dart';
-import '../../models/course/lesson.dart';
-import '../molecules/buttons/primary_text_button.dart';
-import '../molecules/flash_card/back_card.dart';
-import '../molecules/flash_card/front_card.dart';
+import '../../../models/course/lesson.dart';
+import '../../molecules/buttons/primary_text_button.dart';
+import '../../molecules/flash_card/back_card.dart';
+import '../../molecules/flash_card/front_card.dart';
 
 class FlashCardPageBody extends StatefulWidget {
   Lesson lesson;

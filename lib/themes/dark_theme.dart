@@ -11,6 +11,10 @@ ThemeData darkTheme = ThemeData(
         primary: Color.lerp(const Color.fromARGB(255, 59, 117, 245),
             const Color.fromARGB(255, 76, 142, 246), 1)!,
         secondary: Colors.grey[800]!),
+    iconTheme: const IconThemeData(
+      size: 20,
+      color: Colors.white
+    ),
     appBarTheme: AppBarTheme(
         backgroundColor: const Color.fromARGB(255, 24, 26, 31),
         elevation: 0,
@@ -33,18 +37,18 @@ ThemeData darkTheme = ThemeData(
                 color: Colors.white)),
         titleSmall: GoogleFonts.lato(
             textStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 17,
                 fontWeight: FontWeight.w600,
                 color: Colors.white)),
         displayMedium: GoogleFonts.lato(
             textStyle: const TextStyle(
                 fontSize: 18,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
                 color: Colors.white)),
         displayLarge: GoogleFonts.lato(
             textStyle: const TextStyle(
                 fontSize: 24,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
                 color: Colors.white)),
         displaySmall: GoogleFonts.lato(
             textStyle: const TextStyle(

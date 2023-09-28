@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../molecules/card/course_card.dart';
-class ListCourseBody extends StatelessWidget {
 
+class ListCourseBody extends StatelessWidget {
   ListCourseBody({Key? key}) : super(key: key);
 
   @override

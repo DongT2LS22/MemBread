@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/screens/study_page/test/completed_test_page.dart';
-import 'package:gr1_flutter/widget/organisms/none_title_appbar.dart';
+import 'package:gr1_flutter/widget/organisms/app_bar/none_title_appbar.dart';
 import '../../../models/course/lesson.dart';
 import '../../../widget/atoms/card/answer_card.dart';
 class TestPage extends StatefulWidget {

@@ -43,6 +43,7 @@ class Course {
 
   static Future<Course> getById(int id) async{
     Response response = await get(Uri.parse("http://10.0.2.2:8000/api/course/$id"));
+    // print(response.body);
     Course course = Course.fromJson(jsonDecode(response.body));
     return course;
   }

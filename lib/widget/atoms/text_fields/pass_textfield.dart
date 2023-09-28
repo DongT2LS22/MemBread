@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class PassTextField extends StatefulWidget {
   TextEditingController? controller;
-  PassTextField({Key? key,this.controller}) : super(key: key);
+  String? title;
+  PassTextField({Key? key,this.controller,this.title}) : super(key: key);
 
   @override
   State<PassTextField> createState() => _PassTextFieldState();
@@ -30,7 +31,7 @@ class _PassTextFieldState extends State<PassTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Password",
+          widget.title?? "Password",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         const SizedBox(height: 10,),

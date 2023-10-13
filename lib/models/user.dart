@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:gr1_flutter/config/server.dart';
 import 'package:http/http.dart';
 
 class User {
@@ -36,7 +37,7 @@ class User {
     final Map<String, dynamic> data = user.toJson();
     data['password'] = password;
     print(data);
-    final response = await post(Uri.parse("http://10.0.2.2:8000/api/register"),
+    final response = await post(Uri.parse("$URI/api/register"),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
@@ -50,7 +51,7 @@ class User {
     data['email'] = email;
     data['password'] = password;
 
-    return await post(Uri.parse("http://10.0.2.2:8000/api/login"),
+    return await post(Uri.parse("$URI/login"),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
@@ -60,7 +61,7 @@ class User {
   static Future<Response> reset(String email) async {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['email'] = email;
-    return await post(Uri.parse("http://10.0.2.2:8000/api/password/email"),
+    return await post(Uri.parse("$URI/password/email"),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },

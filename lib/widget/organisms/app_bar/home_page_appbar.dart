@@ -56,7 +56,7 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>const SettingPage()));
             },
-            icon: Icon(Icons.search,size: Theme.of(context).iconTheme.size,color: Theme.of(context).iconTheme.color,)
+            icon: Icon(Icons.settings,size: Theme.of(context).iconTheme.size,color: Theme.of(context).iconTheme.color,)
         )
       ],
     );

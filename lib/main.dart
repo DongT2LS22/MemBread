@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/screens/help_center_page/help_center_page.dart';
 import 'package:gr1_flutter/screens/home_page/home_page.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';

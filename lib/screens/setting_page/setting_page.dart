@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/help_center_page/help_center_page.dart';
 import 'package:gr1_flutter/screens/profile_page/profile_page.dart';
 import 'package:gr1_flutter/screens/welcome_page/welcome_page.dart';
 import 'package:gr1_flutter/widget/molecules/card/setting_card.dart';
@@ -46,6 +47,8 @@ class SettingPage extends StatelessWidget {
             SettingCard(
               icon: Icons.help,
               content: "Help center",
+              onTap: ()=>Navigator.push(context, 
+              MaterialPageRoute(builder: (context)=>HelpCenterPage())),
             ),
             const SizedBox(
               height: 10,

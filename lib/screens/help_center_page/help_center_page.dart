@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gr1_flutter/widget/molecules/collapse_box/collapse_box_help_center.dart';
 import 'package:gr1_flutter/widget/organisms/app_bar/title_appbar.dart';
 
-import '../../widget/atoms/buttons/animation_button/expanded_button.dart';
-
 class HelpCenterPage extends StatefulWidget {
   HelpCenterPage({Key? key}) : super(key: key);
 
@@ -36,6 +34,7 @@ class _HelpCenterPageState extends State<HelpCenterPage>
           .colorScheme
           .background,
       appBar: TitleAppbar(
+        onPressed: ()=>Navigator.pop(context),
           title: Text(
             'Help center',
             style: Theme

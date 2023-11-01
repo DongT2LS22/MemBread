@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flip_card: ^0.7.0
   d_chart: ^2.2.11
+  get:
 dev_dependencies:
   flutter_test:
     sdk: flutter

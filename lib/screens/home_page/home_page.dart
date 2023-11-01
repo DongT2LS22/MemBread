@@ -6,6 +6,8 @@ import 'package:gr1_flutter/widget/molecules/card/current_lesson_card.dart';
 import 'package:gr1_flutter/widget/molecules/card/study_type_card.dart';
 import 'package:gr1_flutter/widget/organisms/app_bar/home_page_appbar.dart';
 import '../../models/course/course.dart';
+import 'package:get/get.dart';
+
 
 class HomePage extends StatefulWidget {
   int id;
@@ -20,6 +22,9 @@ class _HomePageState extends State<HomePage> {
   late Future<Course> course;
   late int _currentLesson;
   int selectedIndex = 0;
+  var screens = [
+
+  ];
   @override
   void initState() {
     super.initState();
@@ -89,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            bottomNavigationBar: BottomNavigationBar(
+            bottomNavigationBar: Obx(()=>BottomNavigationBar(
               currentIndex: selectedIndex,
               onTap: (index) {
                 setState(() {
@@ -122,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     label: "Personal"),
               ],
-            ),
+            )),
           );
         } else if (snapshot.hasError) {
           print("Bug roi ban oi");

@@ -10,7 +10,7 @@ class VocaCard extends StatelessWidget {
     return GestureDetector(
       child: Container(
         width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 15),
         child: Row(
           children: [
             Container(

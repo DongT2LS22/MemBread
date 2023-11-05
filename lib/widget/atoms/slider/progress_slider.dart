@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ProgressSlider extends StatefulWidget {
   double progress;
   double width;
-  ProgressSlider({Key? key, required this.progress,required this.width}) : super(key: key);
+  double borderRadius;
+  ProgressSlider({Key? key, required this.progress,required this.width,this.borderRadius = 5}) : super(key: key);
 
   @override
   State<ProgressSlider> createState() => _ProgressSliderState();
@@ -18,7 +19,7 @@ class _ProgressSliderState extends State<ProgressSlider> {
           width: widget.width,
           height: 13,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(widget.borderRadius),
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
@@ -29,7 +30,7 @@ class _ProgressSliderState extends State<ProgressSlider> {
             width: widget.width*widget.progress ,
             height: 13,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(widget.borderRadius),
               color: Colors.white,
             ),
           ),

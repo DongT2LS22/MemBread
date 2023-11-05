@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../../widget/molecules/card/current_lesson_card.dart';
 import '../../../widget/molecules/card/study_type_card.dart';
+import 'package:get/get.dart';
+
+import '../controller/home_controller.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
-
+  Home({super.key});
+  final HomeController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +17,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CurrentLessonCard(
-              title: "Hello", onPressed: () {  },
+              title: "Hello", onPressed: () { controller.changeIndex(1); },
             ),
             const SizedBox(
               height: 30,

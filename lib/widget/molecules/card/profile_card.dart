@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gr1_flutter/widget/atoms/card/primary_card.dart';
 
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
+  String name;
+  int score;
+  ProfileCard({super.key,required this.name,required this.score});
 
   @override
   Widget build(BuildContext context) {

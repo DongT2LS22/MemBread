@@ -18,10 +18,12 @@ class _SignUpPageState extends State<SignUpPage> {
       appBar: NonTitleAppBar(
         onPressed: () => Navigator.pop(context),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: SignInTextField(),
-      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          child: const SignInTextField(),
+        ),
+      )
     );
   }
 }

@@ -30,7 +30,7 @@ class ListLessonPage extends StatelessWidget {
           children: [
             Text("Current lesson",style: Theme.of(context).textTheme.titleMedium,),
             const SizedBox(height: 10,),
-            LessonCard(order: 0,title: course.lessons![0].title!,),
+            LessonCard(order: 0,title: "Hello",),
             const SizedBox(height: 20,),
             Text("List lesson",style: Theme.of(context).textTheme.titleMedium,),
             const SizedBox(height: 10,),

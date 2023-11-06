@@ -54,12 +54,9 @@ class FlashCardInherited extends InheritedWidget {
 
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {
-    // TODO: implement updateShouldNotify
     return true;
   }
-
   static FlashCardInherited? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<FlashCardInherited>();
   }
-
 }

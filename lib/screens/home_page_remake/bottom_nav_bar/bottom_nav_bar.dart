@@ -15,7 +15,7 @@ class BottomNavBar extends StatelessWidget {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       selectedItemColor: Theme.of(context).primaryColor,
-      unselectedItemColor: Colors.white,
+      unselectedItemColor: Theme.of(context).iconTheme.color,
       selectedFontSize: 12,
       selectedIconTheme: const IconThemeData(size: 27, opticalSize: 1),
       unselectedIconTheme: const IconThemeData(opticalSize: 1, size: 27),

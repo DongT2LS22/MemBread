@@ -20,11 +20,7 @@ class StudyTypeCard extends StatelessWidget {
             children: [
               Text(title,style: Theme.of(context).textTheme.titleSmall,),
               const SizedBox(height: 5,),
-              Text(summary,style: const TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white
-              ),)
+              Text(summary,style: Theme.of(context).textTheme.displaySmall,)
             ],
           )
         ],

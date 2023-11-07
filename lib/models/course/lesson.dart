@@ -39,3 +39,10 @@ class Lesson{
     return compute(parseLessons,response.body);
   }
 }
+
+
+var lesson1 = Lesson(
+  id: 1,
+  title: "Hello",
+  units: []
+);

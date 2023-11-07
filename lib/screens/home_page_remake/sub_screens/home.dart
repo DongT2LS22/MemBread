@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/study_page/study/study_page.dart';
 import '../../../widget/molecules/card/current_lesson_card.dart';
 import '../../../widget/molecules/card/study_type_card.dart';
 import 'package:get/get.dart';
@@ -31,16 +32,18 @@ class Home extends StatelessWidget {
               height: 10,
             ),
             StudyTypeCard(
-                icon: Icons.school,
-                title: "Study",
-                summary: "Focus on the lessons"),
+              icon: Icons.school,
+              title: "Study",
+              summary: "Focus on the lessons",
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>StudyPage())),
+            ),
             const SizedBox(
               height: 10,
             ),
             StudyTypeCard(
-                icon: Icons.task_rounded,
-                title: "Test",
-                summary: "Review what you've learned",
+              icon: Icons.task_rounded,
+              title: "Test",
+              summary: "Review what you've learned",
             )
           ],
         ),

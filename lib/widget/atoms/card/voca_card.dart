@@ -9,6 +9,7 @@ class VocaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailVocabularyPage(level: 4,))),
       child: Container(
         width: MediaQuery.of(context).size.width,

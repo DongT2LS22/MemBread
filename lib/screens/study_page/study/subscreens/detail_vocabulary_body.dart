@@ -12,7 +12,8 @@ class DetailVocabularyBody extends StatelessWidget {
       child: Column(
         children: [
           Text("Hello",style: Theme.of(context).textTheme.titleLarge,),
-          
+          SizedBox(height: 20,),
+          Text("Xin chao" ,style: Theme.of(context).textTheme.titleMedium,)
         ],
       ),
     );

@@ -60,16 +60,17 @@ class _ForgotPassTextFieldState extends State<ForgotPassTextField> {
               style: Theme.of(context).textTheme.labelMedium,
             ),
           ),
-          onPressed: () async {
-            final response = await User.reset(emailController.text);
-            if(response.statusCode == 200){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const ResetCodePage()));
-            }else{
-              print(response.statusCode);
-              setState(() {
-                status = false;
-              });
-            }
+          onPressed: () {
+            // final response = await User.reset(emailController.text);
+            // if(response.statusCode == 200){
+            //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const ResetCodePage()));
+            // }else{
+            //   print(response.statusCode);
+            //   setState(() {
+            //     status = false;
+            //   });
+            // }
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ResetCodePage()));
             },
         )
       ],

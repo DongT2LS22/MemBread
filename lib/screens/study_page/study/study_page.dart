@@ -12,6 +12,21 @@ class StudyPage extends StatelessWidget {
   var subScreens = [
     ChoiceBody(),
     DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),
+    ChoiceBody(),
+    DetailVocabularyBody(),ChoiceBody(),
+    DetailVocabularyBody(),
   ];
 
   @override
@@ -25,9 +40,25 @@ class StudyPage extends StatelessWidget {
           child: Column(
             children: [
               StudyProgressSlider(),
-              subScreens[1]
+              Obx(() => subScreens[controller.progress.value])
             ],
           ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        width: MediaQuery.of(context).size.width-40,
+        height: 50,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20)
+        ),
+        child: FloatingActionButton(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20)
+          ),
+          onPressed: () { controller.updateProgress();},
+          backgroundColor: Theme.of(context).primaryColor,
+          child: Text("Next",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),),
         ),
       ),
     );

@@ -31,6 +31,7 @@ class StudyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    controller.progress = 0.obs;
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: NonTitleAppBar(onPressed:()=> Navigator.pop(context),),

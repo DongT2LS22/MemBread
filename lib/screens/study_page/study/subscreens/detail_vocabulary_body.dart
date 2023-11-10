@@ -11,8 +11,9 @@ class DetailVocabularyBody extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
+          SizedBox(height: MediaQuery.of(context).size.height*0.3),
           Text("Hello",style: Theme.of(context).textTheme.titleLarge,),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Text("Xin chao" ,style: Theme.of(context).textTheme.titleMedium,)
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/study_page/study/study_page.dart';
 import 'package:gr1_flutter/widget/atoms/buttons/light_button.dart';
 import 'package:gr1_flutter/widget/atoms/slider/progress_slider.dart';
 import '../../atoms/buttons/border_button.dart';
@@ -42,6 +43,7 @@ class CurrentLessonCard extends StatelessWidget {
           ),
           Center(
               child: LightButton(
+                onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>StudyPage())),
             width: 200,
             child: Center(
                 child: Text(

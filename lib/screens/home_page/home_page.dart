@@ -8,11 +8,11 @@ import 'package:gr1_flutter/widget/organisms/app_bar/home_page_appbar.dart';
 import '../../models/course/course.dart';
 import 'package:get/get.dart';
 
-
 class HomePage extends StatefulWidget {
   int id;
   int? currentLesson;
-  HomePage({Key? key, required this.id,this.currentLesson = 0}) : super(key: key);
+  HomePage({Key? key, required this.id, this.currentLesson = 0})
+      : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -22,9 +22,7 @@ class _HomePageState extends State<HomePage> {
   late Future<Course> course;
   late int _currentLesson;
   int selectedIndex = 0;
-  var screens = [
-
-  ];
+  var screens = [];
   @override
   void initState() {
     super.initState();
@@ -51,8 +49,11 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     CurrentLessonCard(
                       title: snapshot.data!.lessons![_currentLesson].title!,
-                      onPressed: ()=>Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ListLessonPage(course: snapshot.data!))),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ListLessonPage(course: snapshot.data!))),
                     ),
                     const SizedBox(
                       height: 30,
@@ -65,7 +66,8 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => FlashCardPage(
-                                    lesson: snapshot.data!.lessons![_currentLesson],
+                                    lesson:
+                                        snapshot.data!.lessons![_currentLesson],
                                     index: 0,
                                   ))),
                     ),
@@ -88,46 +90,47 @@ class _HomePageState extends State<HomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => TestPage(
-                                      lesson: snapshot.data!.lessons![_currentLesson])));
+                                      lesson: snapshot
+                                          .data!.lessons![_currentLesson])));
                         })
                   ],
                 ),
               ),
             ),
-            bottomNavigationBar: Obx(()=>BottomNavigationBar(
-              currentIndex: selectedIndex,
-              onTap: (index) {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              backgroundColor: Theme.of(context).colorScheme.secondary,
-              type: BottomNavigationBarType.fixed,
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              selectedItemColor: Theme.of(context).primaryColor,
-              unselectedItemColor: Colors.white,
-              selectedFontSize: 12,
-              selectedIconTheme: IconThemeData(size: 27, opticalSize: 1),
-              unselectedIconTheme: IconThemeData(opticalSize: 1, size: 27),
-              items: const [
-                BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    label: "Home"),
-                BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.school,
-                    ),
-                    label: "Course"),
-                BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.person,
-                    ),
-                    label: "Personal"),
-              ],
-            )),
+            bottomNavigationBar: Obx(() => BottomNavigationBar(
+                  currentIndex: selectedIndex,
+                  onTap: (index) {
+                    setState(() {
+                      selectedIndex = index;
+                    });
+                  },
+                  backgroundColor: Theme.of(context).colorScheme.secondary,
+                  type: BottomNavigationBarType.fixed,
+                  showSelectedLabels: false,
+                  showUnselectedLabels: false,
+                  selectedItemColor: Theme.of(context).primaryColor,
+                  unselectedItemColor: Colors.white,
+                  selectedFontSize: 12,
+                  selectedIconTheme: IconThemeData(size: 27, opticalSize: 1),
+                  unselectedIconTheme: IconThemeData(opticalSize: 1, size: 27),
+                  items: const [
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.home,
+                        ),
+                        label: "Home"),
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.school,
+                        ),
+                        label: "Course"),
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.person,
+                        ),
+                        label: "Personal"),
+                  ],
+                )),
           );
         } else if (snapshot.hasError) {
           print("Bug roi ban oi");

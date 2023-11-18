@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gr1_flutter/screens/login_page/login_page.dart';
+import 'package:gr1_flutter/screens/study_page/study/study_page.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';
-import 'package:gr1_flutter/screens/home_page_test/home_page.dart';
+import 'package:gr1_flutter/screens/home_page_remake/home_page.dart';
 void main() async {
   runApp(const MyApp());
 }
@@ -16,9 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: lightTheme,
       darkTheme: darkTheme,
-      themeMode: ThemeMode.dark ,
+      themeMode: ThemeMode.light ,
       debugShowCheckedModeBanner:  false,
-      home: HomePage(),
+      home: StudyPage(),
     );
   }
 }

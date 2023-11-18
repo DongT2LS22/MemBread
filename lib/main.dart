@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/themes/dark_theme.dart';
 import 'package:gr1_flutter/themes/light_theme.dart';
-import 'package:gr1_flutter/screens/home_page_remake/home_page.dart';
+import 'package:gr1_flutter/screens/home_page_test/home_page.dart';
 void main() async {
   runApp(const MyApp());
 }

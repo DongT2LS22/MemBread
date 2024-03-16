@@ -18,7 +18,7 @@ class _WelcomePageState extends State<WelcomePage> {
         leading: Container(),
       ),
       body: Container(
-        width: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

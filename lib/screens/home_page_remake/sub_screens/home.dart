@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../controller/home_controller.dart';
 
 class Home extends StatelessWidget {
-  Home({super.key});
+    Home({super.key});
   final HomeController controller = Get.find();
   @override
   Widget build(BuildContext context) {

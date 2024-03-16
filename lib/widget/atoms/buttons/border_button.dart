@@ -11,7 +11,7 @@ class BorderButton extends StatelessWidget {
       onPressed: onPressed,
       child: Container(
         width: width,
-        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.circular(20),

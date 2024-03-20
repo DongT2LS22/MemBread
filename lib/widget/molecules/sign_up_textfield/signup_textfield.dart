@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../models/user.dart';
+import '../../../models/user/user.dart';
 import '../../atoms/buttons/primary_button.dart';
 import '../../atoms/text_fields/email_textfield.dart';
 import '../../atoms/text_fields/name_textfield.dart';
@@ -56,8 +56,8 @@ class _SignInTextFieldState extends State<SignInTextField> {
             const SizedBox(
               height: 20,
             ),
-            status?Column(
-              children: const [
+            status?const Column(
+              children: [
                 Text(
                   "You need to fill all the information",
                   style: TextStyle(
@@ -95,7 +95,7 @@ class _SignInTextFieldState extends State<SignInTextField> {
         PrimaryButton(
           onPressed: () async {
             final response = await User.register(
-                User(email: emailController.text, name: nameController.text),
+                User(email: emailController.text, name: nameController.text, id: '1'),
                 passController.text);
             if (response.statusCode == 200) {
               Navigator.pop(context);

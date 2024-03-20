@@ -40,6 +40,10 @@ dependencies:
   flip_card: ^0.7.0
   d_chart: ^2.2.11
   get:
+  freezed: ^2.4.7
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  json_annotation: ^4.8.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -50,6 +54,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  riverpod_generator: ^2.4.0
+  freezed: ^2.4.7
+  build_runner: ^2.4.8
+  custom_lint: ^0.6.2
+  riverpod_lint: ^2.3.10
+  json_serializable: ^6.7.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

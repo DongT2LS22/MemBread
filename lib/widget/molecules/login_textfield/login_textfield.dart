@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/models/user.dart';
+import 'package:gr1_flutter/models/user/user.dart';
 import 'package:gr1_flutter/screens/forgot_pass_page/forgot_pass_page.dart';
-import '../../../screens/home_page/home_page.dart';
+import '../../../screens/home_page_remake/home_page.dart';
 import '../../atoms/buttons/primary_button.dart';
 import '../../atoms/checkbox/checkbox.dart';
 import '../../atoms/text_fields/email_textfield.dart';
@@ -86,7 +86,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
             final response = await User.login(emailController.text, passController.text);
             if(response.statusCode == 200) {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomePage(id: 2)));
+                  MaterialPageRoute(builder: (context) => HomePage(courseId: 2,)));
             }else{
               print(response.statusCode);
               setState(() {

@@ -1,37 +1,34 @@
 import 'dart:convert';
-
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:gr1_flutter/config/server.dart';
 import 'package:http/http.dart';
 
-class User {
-  String? id;
-  String? name;
-  String? phone;
-  String? email;
-  String? address;
-  DateTime? birth;
+part 'user.freezed.dart';
+part 'user.g.dart';
 
-  User({this.id, this.name, this.phone, this.email, this.address, this.birth});
+@Freezed()
+class User with _$User{
+  const factory User({
+    required String id,
+    required String name,
+    @Default("") String? phone,
+    required String email,
+    @Default("") String? address,
+    @Default("") String? birth
+  }) = _User;
 
-  User.fromJson(Map<String, dynamic> json) {
-    id = json['id'].toString();
-    name = json['name'];
-    email = json['email'];
-    address = json['address'];
-    phone = json['phone'];
-    birth = DateTime.parse(json['birth']);
-  }
+  factory User.fromJson(Map<String, Object?> json) => _$UserFromJson(json);
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id ?? 0;
-    data['name'] = name;
-    data['email'] = email;
-    data['address'] = address ?? "";
-    data['phone'] = phone ?? "";
-    data['birth'] = birth.toString();
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = <String, dynamic>{};
+  //   data['id'] = id ?? 0;
+  //   data['name'] = name;
+  //   data['email'] = email;
+  //   data['address'] = address ?? "";
+  //   data['phone'] = phone ?? "";
+  //   data['birth'] = birth.toString();
+  //   return data;
+  // }
 
   static Future<Response> register(User user, String password) async {
     final Map<String, dynamic> data = user.toJson();

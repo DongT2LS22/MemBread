@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gr1_flutter/models/user.dart';
-import 'package:gr1_flutter/screens/home_page/home_page.dart';
 import 'package:gr1_flutter/screens/reset_code_page/reset_code_page.dart';
 
 import '../../atoms/buttons/primary_button.dart';

@@ -3,14 +3,13 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/screens/study_page/flash_card/flash_card_page.dart';
 import 'package:gr1_flutter/widget/atoms/slider/flash_card_progress_slider.dart';
-import '../../../models/course/lesson.dart';
 import '../../molecules/buttons/primary_text_button.dart';
 import '../../molecules/flash_card/back_card.dart';
 import '../../molecules/flash_card/front_card.dart';
 
 class FlashCardPageBody extends StatefulWidget {
-  Lesson lesson;
-  FlashCardPageBody({Key? key,required this.lesson}) : super(key: key);
+  // Lesson lesson;
+  FlashCardPageBody({Key? key}) : super(key: key);
 
   @override
   State<FlashCardPageBody> createState() => _FlashCardPageBodyState();
@@ -37,7 +36,7 @@ class _FlashCardPageBodyState extends State<FlashCardPageBody> {
           child: Swiper(
             onIndexChanged: (index){
               setState(() {
-                progress = index/widget.lesson.units!.length;
+                // progress = index/widget.lesson.units!.length;
                 FlashCardInherited.of(context)!.changeIndex(index);
               });
             },
@@ -45,14 +44,14 @@ class _FlashCardPageBodyState extends State<FlashCardPageBody> {
             layout: SwiperLayout.TINDER,
             itemWidth: MediaQuery.of(context).size.width-50,
             itemHeight: 500,
-            itemCount: widget.lesson.units!.length,
+            itemCount: 5,
             loop: false,
             duration: 200,
             itemBuilder: (context, index) {
               return FlipCard(
                   speed: 300,
-                  front: FrontCard(vocabulary: widget.lesson.units![index].vocabulary!,),
-                  back: BackCard(mean: widget.lesson.units![index].mean!,));
+                  front: FrontCard(vocabulary: "HELLO",),
+                  back: BackCard(mean: "HELLO",));
             },
           ),
         ),

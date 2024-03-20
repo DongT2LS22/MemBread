@@ -9,10 +9,10 @@ class ListLessonPage extends StatelessWidget {
   
   _buildListLesson(){
     List<Widget> listLesson = [];
-    course.lessons!.forEach((element) {
-      listLesson.add(LessonCard(order: element.order!, title: element.title!));
-      listLesson.add(const SizedBox(height: 10,));
-    });
+    // course.lessons!.forEach((element) {
+    //   listLesson.add(LessonCard(order: element.order!, title: element.title!));
+    //   listLesson.add(const SizedBox(height: 10,));
+    // });
     return listLesson;
   }
   

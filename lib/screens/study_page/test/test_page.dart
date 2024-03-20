@@ -2,11 +2,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/screens/study_page/test/completed_test_page.dart';
 import 'package:gr1_flutter/widget/organisms/app_bar/none_title_appbar.dart';
-import '../../../models/course/lesson.dart';
 import '../../../widget/atoms/card/answer_card.dart';
 class TestPage extends StatefulWidget {
-  Lesson lesson;
-  TestPage({Key? key,required this.lesson}) : super(key: key);
+  // Lesson lesson;
+  TestPage({Key? key}) : super(key: key);
 
   @override
   State<TestPage> createState() => _TestPageState();
@@ -22,7 +21,7 @@ class _TestPageState extends State<TestPage> {
     // TODO: implement initState
     super.initState();
     _index = 0;
-    _list = widget.lesson.units;
+    // _list = widget.lesson.units;
   }
 
   _getRandomAnswer(){

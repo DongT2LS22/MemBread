@@ -17,7 +17,7 @@ class HomePageAppBar extends StatelessWidget implements PreferredSizeWidget {
             context,
             PageRouteBuilder(
               pageBuilder:
-                  (context, animation, secondaryAnimation) => ListCoursePage(),
+                  (context, animation, secondaryAnimation) => ListCoursePage(course_title: title,),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 const begin = Offset(0.0, 1.0);

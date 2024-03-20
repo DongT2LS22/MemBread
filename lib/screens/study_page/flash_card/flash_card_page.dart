@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:gr1_flutter/widget/organisms/app_bar/flash_card_appbar.dart';
 import 'package:gr1_flutter/widget/organisms/body/flash_card_page_body.dart';
-import '../../../models/course/lesson.dart';
+
 
 class FlashCardPage extends StatefulWidget {
-  Lesson lesson;
+  // Lesson lesson;
   int index;
-  FlashCardPage({Key? key, required this.lesson,required this.index}) : super(key: key);
+  FlashCardPage({Key? key,required this.index}) : super(key: key);
 
   @override
   State<FlashCardPage> createState() => _FlashCardPageState();
 }
 
 class _FlashCardPageState extends State<FlashCardPage> {
-  late Lesson _lesson;
   late int _index;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _lesson = widget.lesson;
     _index = widget.index;
   }
   @override
@@ -39,8 +37,8 @@ class _FlashCardPageState extends State<FlashCardPage> {
         index: _index,
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.background,
-          appBar: FlashCardAppbar(onPressed:()=>Navigator.pop(context),length : _lesson.units!.length),
-          body: FlashCardPageBody(lesson: _lesson,),
+          // appBar: FlashCardAppbar(onPressed:()=>Navigator.pop(context),length : _lesson.units!.length),
+          // body: FlashCardPageBody(lesson: _lesson,),
         )
     );
   }
